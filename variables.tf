@@ -33,13 +33,6 @@ variable "sg_tags" {
 
 }
 
-
-variable "ingress_rules" {
-    type = list
-    default =  []
-
-}
-
 variable "outbound_rules" {
     type = list
     default =  [{
@@ -48,4 +41,10 @@ variable "outbound_rules" {
         protocol        = "-1"
         cidr_blocks = ["0.0.0.0/0"]
     }]
+}
+
+variable "ingress_rules" {
+    type = list
+    default =  []
+
 }
